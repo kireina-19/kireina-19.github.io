@@ -61,38 +61,6 @@ body, html {
   <div class="dropdown-content" id="myDropdown">
     <a href="#">Password Generator Project</a>
     <a href="#">Blown To Bits</a>
-    
-<script>
-function myFunction() {
-  document.getElementById("Portfolio").classList.toggle("show");
-}
-window.onclick = function(e) {
-  if (!e.target.matches('.dropbtn')) {
-  var Portfolio = document.getElementById("Portfolio");
-    if (Portfolio.classList.contains('show')) {
-      Portfolio.classList.remove('show');
-    }
-  }
-}
-  
-<script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
   </div>
   <h3 style="text-align:center;">Portfolio</h3>
   <p>Some news this fine day!</p> 
