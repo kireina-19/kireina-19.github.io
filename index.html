@@ -70,7 +70,29 @@ body, html {
   <h3>Extra Info</h3>
   <p>Get in touch, or swing by for a cup of coffee.</p>
 </div>
+ </div> 
+</div>
 
+<h3>Dropdown Menu inside a Navigation Bar</h3>
+<p>Click on the "Dropdown" link to see the dropdown menu.</p>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+  
 <script>
 function openPage(pageName,elmnt,color) {
   var i, tabcontent, tablinks;
@@ -91,4 +113,4 @@ document.getElementById("defaultOpen").click();
 </script>
    
 </body>
-</html> 
+</html>
