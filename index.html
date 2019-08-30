@@ -28,25 +28,42 @@ body, html {
 .tablink:hover {
   background-color: #777;
 }
-<button class="tablink" onclick="openPage('About Me', this, 'blue')">Home</button>
-<button class="tablink" onclick="openPage('Portfolio', this, 'blue')" id="defaultOpen">News</button>
-<button class="tablink" onclick="openPage('Extra Info', this, 'blue')">Contact</button>
 
-<div id="About Me" class="tabcontent">
-  <h3>About Me</h3>
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: white;}
+#News {background-color: white;}
+#Contact {background-color: white;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'blue')"id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'blue')">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
   <p>Home is where the heart is..</p>
 </div>
 
-<div id="Portfolio" class="tabcontent">
-  <h3>Portfolio</h3>
+<div id="News" class="tabcontent">
+  <h3>News</h3>
   <p>Some news this fine day!</p> 
 </div>
 
-<div id="Extra Info" class="tabcontent">
-  <h3>Extra Info</h3>
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
   <p>Get in touch, or swing by for a cup of coffee.</p>
 </div>
-   <script>
+
+<script>
 function openPage(pageName,elmnt,color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -64,6 +81,5 @@ function openPage(pageName,elmnt,color) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
-  
 </body>
-</html>
+</html> 
