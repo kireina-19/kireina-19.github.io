@@ -40,8 +40,7 @@ body, html {
 #About Me {background-color: white;}
 #Portfolio {background-color: white;}
 #Extra Info {background-color: white;}
-</style>
- <style>
+
 .dropbtn {
   background-color: #3498DB;
   color: white;
@@ -98,7 +97,7 @@ body, html {
 <body>
 
 <button class="tablink" onclick="openPage('About Me', this, 'blue')"id="defaultOpen">About Me</button>
-<button class="tablink" onclick="openPage('Portfolio', this, 'blue')">Portfolio</button>
+<button class="dropdown-content" onclick="openPage('Portfolio', this, 'blue')">Portfolio</button>
 <button class="tablink" onclick="openPage('Extra Info', this, 'blue')">Extra Info</button>
 
 <div id="About Me" class="tabcontent">
@@ -106,7 +105,7 @@ body, html {
   <p>Home is where the heart is..</p>
 </div>
 
-<div id="Portfolio" class="tabcontent">
+<div id="Portfolio" class="dropdown-content">
   <h3>Portfolio</h3>
   <p>Some news this fine day!</p> 
 </div>
