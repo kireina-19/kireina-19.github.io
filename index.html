@@ -41,51 +41,6 @@ body, html {
 #Portfolio {background-color: white;}
 #Extra Info {background-color: white;}
 
-.dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
-</style>
-</head>
-<body>
-
-<h2>Clickable Dropdown</h2>
-<p>Click on the button to open the dropdown menu.</p>
-<div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Portfolio</button>
   <div id="myDropdown" class="dropdown-content">
     <a href="#Password Generator Project">Password Generator Project</a>
@@ -97,7 +52,7 @@ body, html {
 <body>
 
 <button class="tablink" onclick="openPage('About Me', this, 'blue')"id="defaultOpen">About Me</button>
-<button class="dropdown-content" onclick="openPage('Portfolio', this, 'blue')">Portfolio</button>
+<button class="tablink" onclick="myFunction()('Portfolio', this, 'blue')">Portfolio</button>
 <button class="tablink" onclick="openPage('Extra Info', this, 'blue')">Extra Info</button>
 
 <div id="About Me" class="tabcontent">
@@ -105,7 +60,7 @@ body, html {
   <p>Home is where the heart is..</p>
 </div>
 
-<div id="Portfolio" class="dropdown-content">
+<div id="Portfolio" class="tabcontent">
   <h3>Portfolio</h3>
   <p>Some news this fine day!</p> 
 </div>
@@ -134,4 +89,4 @@ function openPage(pageName,elmnt,color) {
 document.getElementById("defaultOpen").click();
 </script>
 </body>
-</html> 
+</html>
